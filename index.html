@@ -1,324 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
-    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
-    <!--CDNS-->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- ScrollReveal-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Portfolio</title>
+    <meta name="description" content="Portafolio de Eduardo - Ingeniero en Informática">
+    <title>Eduardo | Portafolio</title>
+
+    <!-- Favicon -->
     <link rel="icon" href="img/github_white.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Titillium+Web:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap CSS (Modified/Utility only where needed) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <!--NavBar-->
 
-    <nav class="navbar navbar-expand-lg" id="navbar">
-        <div class="container">
-            <!-- Menú navbar en dispositivos moviles -->
-            <a class="navbar-brand" href="https://pages.github.com/"><img src="img/github.png" class="logo-brand"
-                    alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <!-- Icono hamburguesa -->
-                <i class="fas fa-bars"></i>
-            </button>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/github.png" class="logo-brand" alt="Logo">
+                </a>
 
-            <!-- Items y dropwdown del Navbar -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" id="sobre-mi" style="cursor: pointer;"
-                            onclick="changeLanguage('es')">
-                            <img src="img/spanish.png" width="30" height="30" id="idioma">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" id="sobre-mi" style="cursor: pointer;"
-                            onclick="changeLanguage('en')">
-                            <img src="img/english.png" width="30" height="30" id="idioma">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link cool-link" id="sobre-mi" href="#herramientas">
-                            <p id="texto-nav" data-i18n="about-me-nav"><i class="fas fa-user-edit"></i> Sobre mi</p>
-                        </a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link cool-link" id="registro" href="#contacto">
-                            <p id="texto-nav" data-i18n="contact-nav"><i class="far fa-address-book"></i> Contacto</p>
-                        </a>
-                    </li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
 
-    <!-- Presentación -->
-    <section id="hero">
-        <div class="container">
-            <br>
-            <h1 class="text-center" id="presentacion" data-i18n="presentation-h1">Hola!</h1>
-            <br>
-            <img src="img/edu.jpg" class="foto-erziok rounded-circle" width="184" height="184">
-            <br>
-            <h3 id="presentacion" class="text-center" data-i18n="presentation-h3">Mi nombre es Eduardo</h3>
-            <h4 id="presentacion" class="text-center" data-i18n="presentation-h4">Soy de Chile y soy ingeniero en
-                informática</h4><br><br>
-            <center><a class="button" href="#herramientas" data-i18n="about-me-btn">Acerca de mí</a></center>
-            <br><br>
-        </div>
-    </section>
-
-
-    <div class="container">
-        <hr>
-        <br>
-        <div class="shadow p-3 mb-5 rounded text-center fondo_titulo" id="herramientas">
-            <h1 data-i18n="tools-h1">Algunos de los lenguajes y tecnologías que he utilizado</h1>
-        </div>
-        <br><br>
-
-        <div class="row container text-center">
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/javascript.png" id="foto" width="90" height="90">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="changeLanguage('es')" aria-label="Español">
+                                <img src="img/spanish.png" alt="Español" class="lang-icon">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="changeLanguage('en')" aria-label="English">
+                                <img src="img/english.png" alt="English" class="lang-icon">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero">
+                                <span data-i18n="about-me-nav"><i class="fas fa-user"></i> Sobre mí</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">
+                                <span data-i18n="tools-nav"><i class="fas fa-code"></i> Skills</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">
+                                <span data-i18n="projects-nav"><i class="fas fa-laptop-code"></i> Proyectos</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
+        </nav>
+    </header>
 
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="d-flex align-items-center">
+            <div class="container text-center">
+                <div class="hero-content">
+                    <h1 data-i18n="presentation-h1" class="hero-title reveal">Hola!</h1>
+                    <div class="profile-img-container reveal">
+                        <img src="img/edu.jpg" alt="Eduardo" class="profile-img">
+                    </div>
+                    <h2 data-i18n="presentation-h3" class="reveal">Mi nombre es Eduardo</h2>
+                    <p data-i18n="presentation-h4" class="hero-subtitle reveal">Soy de Chile y soy ingeniero en
+                        informática</p>
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/html5.png" id="foto" width="90" height="90">
-                        </li>
-                    </ul>
+                    <div class="hero-buttons reveal">
+                        <a href="#skills" class="btn btn-primary custom-btn" data-i18n="about-me-btn">Acerca de mí</a>
+                        <!-- Added a contact button placeholder if desired -->
+                        <!-- <a href="#contact" class="btn btn-outline-light custom-btn" data-i18n="contact-btn">Contacto</a> -->
+                    </div>
                 </div>
             </div>
+        </section>
 
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <div class="section-title text-center mb-5 reveal">
+                    <h2 data-i18n="tools-h1">Tecnologías</h2>
+                    <div class="underline"></div>
+                </div>
 
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/django.png" id="foto" width="90" height="90">
-                        </li>
-                    </ul>
+                <div class="skills-grid reveal">
+                    <!-- Skills Items -->
+                    <!-- Using IDs to allow replacing images later if needed, kept structure simple -->
+                    <div class="skill-card">
+                        <img src="img/javascript.png" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/html5.png" alt="HTML5">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/django.png" alt="Django">
+                        <span>Django</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/java.png" alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/MySQL.png" alt="MySQL">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/react.png" alt="React">
+                        <span>React</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/python.png" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/php.png" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/laravel.png" alt="Laravel">
+                        <span>Laravel</span>
+                    </div>
                 </div>
             </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-darker">
+            <div class="container">
+                <div class="section-title text-center mb-5 reveal">
+                    <h2 data-i18n="projects-h1">Proyectos</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">PetSafe</h3>
+                                <p class="project-desc" data-i18n="project-1-desc-1">Proyecto de portafolio de título.
+                                </p>
+                                <p class="project-tech" data-i18n="project-1-desc-2">Stack: PHP - MySQL</p>
+                                <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank"
+                                    class="project-link" data-i18n="more-info">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">IP Camera App</h3>
+                                <p class="project-desc" data-i18n="project-2-desc-1">IP Camera App</p>
+                                <p class="project-tech" data-i18n="project-2-desc-2">Stack: Python</p>
+                                <a href="https://github.com/epg117/IP-Camera-App" target="_blank" class="project-link"
+                                    data-i18n="more-info">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Neural Network</h3>
+                                <p class="project-desc" data-i18n="project-3-desc-1">Feed Forward NN</p>
+                                <p class="project-tech" data-i18n="project-3-desc-2">Stack: Python</p>
+                                <a href="https://github.com/erziok/Feed-Forward-Neural-Network" target="_blank"
+                                    class="project-link" data-i18n="more-info">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Banco Monopoly</h3>
+                                <p class="project-desc" data-i18n="project-4-desc-1">Análisis supervisado</p>
+                                <p class="project-tech" data-i18n="project-4-desc-2">Stack: Python</p>
+                                <a href="https://github.com/erziok/Supervised-Analysis-Banco-Monopoly" target="_blank"
+                                    class="project-link" data-i18n="more-info">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Portal Repostero</h3>
+                                <p class="project-desc" data-i18n="project-5-desc-1">Web App Django</p>
+                                <p class="project-tech" data-i18n="project-5-desc-2">Stack: Django - Python</p>
+                                <a href="https://github.com/erziok/Portal-Repostero-Django" target="_blank"
+                                    class="project-link" data-i18n="more-info">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="col-lg-4 col-md-6 reveal">
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">PharmaLink</h3>
+                                <p class="project-desc" data-i18n="project-6-desc-1">Autoservicio Farmacias</p>
+                                <p class="project-tech" data-i18n="project-6-desc-2">Stack: Java - MySQL</p>
+                                <a href="https://github.com/razhe/PharmaLink" target="_blank" class="project-link"
+                                    data-i18n="more-info">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Github Button -->
+                <div class="text-center mt-5 reveal">
+                    <a href="https://github.com/epg117" target="_blank" class="btn btn-outline-light custom-btn btn-lg"
+                        data-i18n="github-btn">
+                        Ver más en Github <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container text-center py-4">
+            <div class="social-links mb-3">
+                <a href="https://github.com/epg117" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <!-- Add more social links if needed -->
+            </div>
+            <p class="copyright">© <span id="year"></span> Eduardo. All Rights Reserved.</p>
         </div>
-        <div class="row container text-center">
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/java.png" id="foto" width="90" height="90">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/MySQL.png" id="foto" width="90" height="90">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/react.png" id="foto" width="90" height="90">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row container text-center">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language ">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/python.png" id="foto" width="90" height="90">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/php.png" id="foto" width="90" height="70">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <div class="language">
-                    <ul class="list-unstyled">
-                        <li>
-                            <img src="img/laravel.png" id="foto" width="90" height="70">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-
-        <br><br>
-        <hr>
-        <div class="shadow p-3 mb-5 rounded text-center fondo_titulo">
-            <h1 data-i18n="projects-h1">Proyectos en los que he trabajado</h1>
-        </div>
-        <br>
-        <div class="row">
-
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="project text-center">
-                    <h5 class="project-title">PetSafe</h5>
-                    <p class="project-text" data-i18n="project-1-desc-1">Proyecto de portafolio de título.</p>
-                    <p class="project-text" data-i18n="project-1-desc-2">Lenguajes y herramientas utilizadas: PHP -
-                        MySQL.</p>
-                    <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank" class="btn-project"
-                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="project text-center">
-                    <h5 class="project-title">Data Mining: Australians Rains</h5>
-                    <p class="project-text" data-i18n="project-2-desc-1">Proyecto de minería de datos.</p>
-                    <p class="project-text" data-i18n="project-2-desc-2">Lenguajes y herramientas utilizadas: Python -
-                        Jupyter Notebook.</p>
-                    <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank" class="btn-project"
-                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="project text-center">
-                    <h5 class="project-title">Feed Forward Neural Network</h5>
-                    <p class="project-text" data-i18n="project-3-desc-1">Proyecto de Deep Learning.</p>
-                    <p class="project-text" data-i18n="project-3-desc-2">Lenguajes y herramientras utilizadas: Python -
-                        Jupyter Notebook.</p>
-                    <a href="https://github.com/erziok/Feed-Forward-Neural-Network" target="_blank" class="btn-project"
-                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="project text-center">
-                    <h5 class="project-title">Análisis supervisado Banco Monopoly</h5>
-                    <p class="project-text" data-i18n="project-4-desc-1">Proyecto de Machine Learning.</p>
-                    <p class="project-text" data-i18n="project-4-desc-2">Lenguajes y herramientras utilizadas: Python -
-                        Jupyter Notebook.</p>
-                    <a href="https://github.com/erziok/Supervised-Analysis-Banco-Monopoly" target="_blank"
-                        class="btn-project" data-i18n="more-info"><i class="fa-brands fa-github"></i> Más
-                        información</a>
-                </div>
-            </div>
-
-
-
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="project text-center">
-                    <h5 class="project-title">Portal Repostero - Django</h5>
-                    <p class="project-text" data-i18n="project-5-desc-1">Proyecto de desarrollo web con framework.</p>
-                    <p class="project-text" data-i18n="project-5-desc-2">Lenguajes utilizados: HTML5 - CSS - Javascript
-                        - Python.</p>
-                    <a href="https://github.com/erziok/Portal-Repostero-Django" target="_blank" class="btn-project"
-                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
-                </div>
-            </div>
-
-
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="project text-center">
-                    <h5 class="project-title">PharmaLink</h5>
-                    <p class="project-text" data-i18n="project-6-desc-1">Proyecto de autoservicio en farmacias.</p>
-                    <p class="project-text" data-i18n="project-6-desc-2">Lenguajes y herramientas utilizadas: Java -
-                        MySQL.</p>
-                    <a href="https://github.com/razhe/PharmaLink" target="_blank" class="btn-project"
-                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
-                </div>
-            </div>
-
-        </div>
-
-        <hr>
-        <br>
-        <!-- <div class="shadow p-3 mb-5 rounded text-center fondo_titulo" id="contacto">
-            <h1 data-i18n="social-h1">Redes sociales</h1>
-        </div>
-        <br>
-        <div class="row container text-center">
-            <div class="col-lg-6 col-md-12 col-sm-12" style="text-align: center;">
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://github.com/erziok" target="_blank"><img src="img/github-transparente.png"
-                                width="80" height="80"></a>
-                        <p style="text-align: center;" id="github"> Github</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12" style="text-align: center;">
-                <ul class="list-unstyled">
-                    <li>
-                        <img src="img/discord.png" width="80" height="80">
-                        <p style="text-align: center;" id="twitter"> @erziok</p>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
-    </div>
-
-    <a href="#" class="gotopbtn rounded-circle" id="btn-volver-inicio">
-        <i class="fas fa-angle-up"></i></a>
-
-
-
-    <footer class="page-footer font-small indigo" id="contenedor-footer">
-        <div class="footer-copyright text-center py-3" id="footer">
-            <h4>© <span id="year"></span></h4>
     </footer>
 
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Main JS -->
     <script src="js/script.js"></script>
     <script>
+        // Update Year
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ScrollReveal
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2500,
+            delay: 400,
+            // reset: true // Animations repeat
+        });
+
+        sr.reveal('.hero-title, .section-title');
+        sr.reveal('.profile-img-container', { delay: 500 });
+        sr.reveal('.hero-subtitle, .hero-buttons', { delay: 600 });
+        sr.reveal('.skills-grid', { interval: 100 });
+        sr.reveal('.project-card', { interval: 200 });
+
+        // Sticky Navbar
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
     </script>
 </body>
 

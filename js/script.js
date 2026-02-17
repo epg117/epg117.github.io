@@ -1,6 +1,8 @@
 const translations = {
     es: {
-        'about-me-nav': '<i class="fas fa-user-edit"></i> Sobre mi',
+        'about-me-nav': '<i class="fas fa-user"></i> Sobre mi',
+        'tools-nav': '<i class="fas fa-code"></i> Skills',
+        'projects-nav': '<i class="fas fa-laptop-code"></i> Proyectos',
         'contact-nav': '<i class="far fa-address-book"></i> Contacto',
         'presentation-h1': 'Hola!',
         'presentation-h3': 'Mi nombre es Eduardo',
@@ -10,8 +12,8 @@ const translations = {
         'projects-h1': 'Proyectos en los que he trabajado',
         'project-1-desc-1': 'Proyecto de portafolio de título.',
         'project-1-desc-2': 'Lenguajes y herramientas utilizadas: PHP - MySQL.',
-        'project-2-desc-1': 'Proyecto de minería de datos.',
-        'project-2-desc-2': 'Lenguajes y herramientas utilizadas: Python - Jupyter Notebook.',
+        'project-2-desc-1': 'Proyecto de cámaras IP en Linux.',
+        'project-2-desc-2': 'Lenguajes y herramientas utilizadas: Python.',
         'project-3-desc-1': 'Proyecto de Deep Learning.',
         'project-3-desc-2': 'Lenguajes y herramientras utilizadas: Python - Jupyter Notebook.',
         'project-4-desc-1': 'Proyecto de Machine Learning.',
@@ -21,10 +23,13 @@ const translations = {
         'project-6-desc-1': 'Proyecto de autoservicio en farmacias.',
         'project-6-desc-2': 'Lenguajes y herramientas utilizadas: Java - MySQL.',
         'social-h1': 'Redes sociales',
-        'more-info': '<i class="fa-brands fa-github"></i> Más información'
+        'more-info': '<i class="fa-brands fa-github"></i> Más información',
+        'github-btn': 'Ver más en Github <i class="fa-brands fa-github"></i>'
     },
     en: {
-        'about-me-nav': '<i class="fas fa-user-edit"></i> About me',
+        'about-me-nav': '<i class="fas fa-user"></i> About me',
+        'tools-nav': '<i class="fas fa-code"></i> Skills',
+        'projects-nav': '<i class="fas fa-laptop-code"></i> Projects',
         'contact-nav': '<i class="far fa-address-book"></i> Contact',
         'presentation-h1': 'Hello!',
         'presentation-h3': 'My name is Eduardo',
@@ -34,8 +39,8 @@ const translations = {
         'projects-h1': 'Projects I have worked on',
         'project-1-desc-1': 'Final career project.',
         'project-1-desc-2': 'Made with: Laravel PHP - MySQL.',
-        'project-2-desc-1': 'Data mining project.',
-        'project-2-desc-2': 'Made with: Python - Jupyter Notebook.',
+        'project-2-desc-1': 'IP Camera project on Linux.',
+        'project-2-desc-2': 'Made with: Python.',
         'project-3-desc-1': 'Deep Learning project.',
         'project-3-desc-2': 'Made with: Python - Jupyter Notebook.',
         'project-4-desc-1': 'Machine learning project using supervised analysis.',
@@ -45,7 +50,8 @@ const translations = {
         'project-6-desc-1': 'Autoservice project in pharmacies.',
         'project-6-desc-2': 'Made with: Java - MySQL.',
         'social-h1': 'Social networks',
-        'more-info': '<i class="fa-brands fa-github"></i> More information'
+        'more-info': '<i class="fa-brands fa-github"></i> More information',
+        'github-btn': 'See more on Github <i class="fa-brands fa-github"></i>'
     }
 };
 
