@@ -45,25 +45,27 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link cool-link" id="sobre-mi" href="index.html">
+                        <a class="nav-link cool-link" id="sobre-mi" style="cursor: pointer;"
+                            onclick="changeLanguage('es')">
                             <img src="img/spanish.png" width="30" height="30" id="idioma">
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link cool-link" id="sobre-mi" href="index-english.html">
+                        <a class="nav-link cool-link" id="sobre-mi" style="cursor: pointer;"
+                            onclick="changeLanguage('en')">
                             <img src="img/english.png" width="30" height="30" id="idioma">
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link cool-link" id="sobre-mi" href="#herramientas">
-                            <p id="texto-nav"><i class="fas fa-user-edit"></i> Sobre mi</p>
+                            <p id="texto-nav" data-i18n="about-me-nav"><i class="fas fa-user-edit"></i> Sobre mi</p>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link cool-link" id="registro" href="#contacto">
-                            <p id="texto-nav"><i class="far fa-address-book"></i> Contacto</p>
+                            <p id="texto-nav" data-i18n="contact-nav"><i class="far fa-address-book"></i> Contacto</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -73,13 +75,14 @@
     <section id="hero">
         <div class="container">
             <br>
-            <h1 class="text-center" id="presentacion">Hola!</h1>
+            <h1 class="text-center" id="presentacion" data-i18n="presentation-h1">Hola!</h1>
             <br>
             <img src="img/edu.jpg" class="foto-erziok rounded-circle" width="184" height="184">
             <br>
-            <h3 id="presentacion" class="text-center">Mi nombre es Eduardo, también conocido como Erziok</h3>
-            <h4 id="presentacion" class="text-center">Soy de Chile y soy ingeniero en informática</h4><br><br>
-            <center><a class="button" href="#herramientas">Acerca de mí</a></center>
+            <h3 id="presentacion" class="text-center" data-i18n="presentation-h3">Mi nombre es Eduardo</h3>
+            <h4 id="presentacion" class="text-center" data-i18n="presentation-h4">Soy de Chile y soy ingeniero en
+                informática</h4><br><br>
+            <center><a class="button" href="#herramientas" data-i18n="about-me-btn">Acerca de mí</a></center>
             <br><br>
         </div>
     </section>
@@ -89,7 +92,7 @@
         <hr>
         <br>
         <div class="shadow p-3 mb-5 rounded text-center fondo_titulo" id="herramientas">
-            <h1>Algunos de los lenguajes y tecnologías que he utilizado</h1>
+            <h1 data-i18n="tools-h1">Algunos de los lenguajes y tecnologías que he utilizado</h1>
         </div>
         <br><br>
 
@@ -199,7 +202,7 @@
         <br><br>
         <hr>
         <div class="shadow p-3 mb-5 rounded text-center fondo_titulo">
-            <h1>Proyectos en los que he trabajado</h1>
+            <h1 data-i18n="projects-h1">Proyectos en los que he trabajado</h1>
         </div>
         <br>
         <div class="row">
@@ -207,40 +210,45 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="project text-center">
                     <h5 class="project-title">PetSafe</h5>
-                    <p class="project-text">Proyecto de portafolio de título.</p>
-                    <p class="project-text">Lenguajes y herramientas utilizadas: PHP - MySQL.</p>
-                    <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank" class="btn-project"><i
-                            class="fa-brands fa-github"></i> Más información</a>
+                    <p class="project-text" data-i18n="project-1-desc-1">Proyecto de portafolio de título.</p>
+                    <p class="project-text" data-i18n="project-1-desc-2">Lenguajes y herramientas utilizadas: PHP -
+                        MySQL.</p>
+                    <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank" class="btn-project"
+                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="project text-center">
                     <h5 class="project-title">Data Mining: Australians Rains</h5>
-                    <p class="project-text">Proyecto de minería de datos.</p>
-                    <p class="project-text">Lenguajes y herramientas utilizadas: Python - Jupyter Notebook.</p>
-                    <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank" class="btn-project"><i
-                            class="fa-brands fa-github"></i> Más información</a>
+                    <p class="project-text" data-i18n="project-2-desc-1">Proyecto de minería de datos.</p>
+                    <p class="project-text" data-i18n="project-2-desc-2">Lenguajes y herramientas utilizadas: Python -
+                        Jupyter Notebook.</p>
+                    <a href="https://github.com/erziok/Portafolio-de-titulo" target="_blank" class="btn-project"
+                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="project text-center">
                     <h5 class="project-title">Feed Forward Neural Network</h5>
-                    <p class="project-text">Proyect de Deep Learning.</p>
-                    <p class="project-text">Lenguajes y herramientras utilizadas: Python - Jupyter Notebook.</p>
-                    <a href="https://github.com/erziok/Feed-Forward-Neural-Network" target="_blank"
-                        class="btn-project"><i class="fa-brands fa-github"></i> Más información</a>
+                    <p class="project-text" data-i18n="project-3-desc-1">Proyecto de Deep Learning.</p>
+                    <p class="project-text" data-i18n="project-3-desc-2">Lenguajes y herramientras utilizadas: Python -
+                        Jupyter Notebook.</p>
+                    <a href="https://github.com/erziok/Feed-Forward-Neural-Network" target="_blank" class="btn-project"
+                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="project text-center">
                     <h5 class="project-title">Análisis supervisado Banco Monopoly</h5>
-                    <p class="project-text">Proyecto de Machine Learning.</p>
-                    <p class="project-text">Lenguajes y herramientras utilizadas: Python - Jupyter Notebook.</p>
+                    <p class="project-text" data-i18n="project-4-desc-1">Proyecto de Machine Learning.</p>
+                    <p class="project-text" data-i18n="project-4-desc-2">Lenguajes y herramientras utilizadas: Python -
+                        Jupyter Notebook.</p>
                     <a href="https://github.com/erziok/Supervised-Analysis-Banco-Monopoly" target="_blank"
-                        class="btn-project"><i class="fa-brands fa-github"></i> Más información</a>
+                        class="btn-project" data-i18n="more-info"><i class="fa-brands fa-github"></i> Más
+                        información</a>
                 </div>
             </div>
 
@@ -249,10 +257,11 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="project text-center">
                     <h5 class="project-title">Portal Repostero - Django</h5>
-                    <p class="project-text">Proyecto de desarrollo web con framework.</p>
-                    <p class="project-text">Lenguajes utilizados: HTML5 - CSS - Javascript - Python.</p>
-                    <a href="https://github.com/erziok/Portal-Repostero-Django" target="_blank" class="btn-project"><i
-                            class="fa-brands fa-github"></i> Más información</a>
+                    <p class="project-text" data-i18n="project-5-desc-1">Proyecto de desarrollo web con framework.</p>
+                    <p class="project-text" data-i18n="project-5-desc-2">Lenguajes utilizados: HTML5 - CSS - Javascript
+                        - Python.</p>
+                    <a href="https://github.com/erziok/Portal-Repostero-Django" target="_blank" class="btn-project"
+                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
                 </div>
             </div>
 
@@ -260,10 +269,11 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="project text-center">
                     <h5 class="project-title">PharmaLink</h5>
-                    <p class="project-text">Proyecto de autoservicio en farmacias.</p>
-                    <p class="project-text">Lenguajes y herramientas utilizadas: Java - MySQL.</p>
-                    <a href="https://github.com/razhe/PharmaLink" target="_blank" class="btn-project"><i
-                            class="fa-brands fa-github"></i> Más información</a>
+                    <p class="project-text" data-i18n="project-6-desc-1">Proyecto de autoservicio en farmacias.</p>
+                    <p class="project-text" data-i18n="project-6-desc-2">Lenguajes y herramientas utilizadas: Java -
+                        MySQL.</p>
+                    <a href="https://github.com/razhe/PharmaLink" target="_blank" class="btn-project"
+                        data-i18n="more-info"><i class="fa-brands fa-github"></i> Más información</a>
                 </div>
             </div>
 
@@ -271,8 +281,8 @@
 
         <hr>
         <br>
-        <div class="shadow p-3 mb-5 rounded text-center fondo_titulo" id="contacto">
-            <h1>Redes sociales</h1>
+        <!-- <div class="shadow p-3 mb-5 rounded text-center fondo_titulo" id="contacto">
+            <h1 data-i18n="social-h1">Redes sociales</h1>
         </div>
         <br>
         <div class="row container text-center">
@@ -293,7 +303,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <a href="#" class="gotopbtn rounded-circle" id="btn-volver-inicio">
@@ -303,9 +313,10 @@
 
     <footer class="page-footer font-small indigo" id="contenedor-footer">
         <div class="footer-copyright text-center py-3" id="footer">
-            <h4>© <span id="year"></span> Erziok</h4>
+            <h4>© <span id="year"></span></h4>
     </footer>
 
+    <script src="js/script.js"></script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
