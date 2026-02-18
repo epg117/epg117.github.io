@@ -90,8 +90,17 @@
                         <img src="img/edu.jpg" alt="Eduardo" class="profile-img">
                     </div>
                     <h2 data-i18n="presentation-h3" class="reveal">Mi nombre es Eduardo</h2>
-                    <p data-i18n="presentation-h4" class="hero-subtitle reveal">Soy de Chile y soy ingeniero en
-                        informática</p>
+
+                    <!-- Typing animation -->
+                    <div class="typing-container reveal">
+                        <span id="typing-text"></span><span class="typing-cursor">|</span>
+                    </div>
+
+                    <p data-i18n="presentation-h4" class="hero-subtitle reveal">Soy de Chile y soy Ingeniero en
+                        Informática.</p>
+                    <p data-i18n="presentation-h5" class="hero-subtitle hero-bio reveal">Actualmente me desempeño como
+                        desarrollador fullstack, principalmente trabajando con React y ASP.NET. En mis tiempos libres me
+                        dedico a aprender sobre Linux y desarrollar pequeños proyectos en Python.</p>
 
                     <div class="hero-buttons reveal">
                         <a href="#skills" class="btn btn-primary custom-btn" data-i18n="about-me-btn">Acerca de mí</a>
@@ -148,6 +157,10 @@
                     <div class="skill-card">
                         <img src="img/laravel.png" alt="Laravel">
                         <span>Laravel</span>
+                    </div>
+                    <div class="skill-card">
+                        <img src="img/dotnet.svg" alt="ASP.NET Core">
+                        <span>ASP.NET</span>
                     </div>
                 </div>
             </div>
@@ -326,6 +339,53 @@
                 backToTop.classList.remove('active');
             }
         });
+
+        // Typing animation
+        const typingPhrases = {
+            es: ['Desarrollador Fullstack', 'Python Enthusiast', 'Linux Enthusiast'],
+            en: ['Fullstack Developer', 'Python Enthusiast', 'Linux Enthusiast']
+        };
+
+        let typingIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingTimeout;
+
+        function getCurrentLang() {
+            return localStorage.getItem('lang') || 'es';
+        }
+
+        function typeEffect() {
+            const lang = getCurrentLang();
+            const phrases = typingPhrases[lang];
+            const currentPhrase = phrases[typingIndex % phrases.length];
+            const el = document.getElementById('typing-text');
+            if (!el) return;
+
+            if (isDeleting) {
+                el.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                el.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let delay = isDeleting ? 60 : 100;
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                delay = 1800; // pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                typingIndex++;
+                delay = 400; // pause before next phrase
+            }
+
+            typingTimeout = setTimeout(typeEffect, delay);
+        }
+
+        // Start typing after a short delay (let ScrollReveal animate first)
+        setTimeout(typeEffect, 1200);
     </script>
 </body>
 

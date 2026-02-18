@@ -251,6 +251,43 @@ ul {
     margin-right: auto;
 }
 
+.hero-bio {
+    font-size: 1rem;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+/* Typing animation */
+.typing-container {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 12px 0 4px;
+    min-height: 2rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.typing-cursor {
+    display: inline-block;
+    color: var(--secondary-color);
+    animation: blink 0.75s step-end infinite;
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 .hero-buttons {
     margin-top: 40px;
     display: flex;
